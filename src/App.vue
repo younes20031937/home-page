@@ -1,8 +1,15 @@
 <script setup>
-import Card from './Card.vue';
+import Card from "./Card.vue";
+import KanbanBoard from "./components/KanbanBoard.vue";
+import { onMounted } from 'vue'
+import { initFlowbite } from 'flowbite'
+
+// initialize components based on data attribute selectors
+onMounted(() => {
+    initFlowbite();
+})
 </script>
 <template>
- <Card title="First" icon="home" modal="firstModal" />
- <Card title="Second" icon="user" modal="secondModal"/>
- <Card title="Third" icon="cog" modal="thirdModal"/>
+ <KanbanBoard/>
+
 </template>
